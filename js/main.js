@@ -24,3 +24,12 @@ function galleryonhover(pic){
   elements[pic].style.width = '120%';
   elements[pic].style.height = '120%';
 }
+
+function gallerymouseleave(){
+  for(i = 0; i <=7; i++){
+    elements[i].style.width = '100%';
+    elements[i].style.height = '100%';
+    elements[i].style.margin = '0%';
+    elements[i].style.marginLeft = '0%';
+  }
+}
