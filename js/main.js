@@ -33,3 +33,10 @@ function gallerymouseleave(){
     elements[i].style.marginLeft = '0%';
   }
 }
+
+function showpopup(n){
+  let closebehind = document.getElementById('closebehind');
+  let pop = document.getElementsByClassName('popup')[n];
+  pop.style.display = 'flex';
+  closebehind.style.display = 'inline'
+}
