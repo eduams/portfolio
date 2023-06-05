@@ -1,6 +1,7 @@
 window.onscroll = function() {gallery()};
 
 var elements = document.getElementsByClassName("gallery-pic");
+var pop;
 
 function gallery() {
   if (document.body.scrollTop > (window.innerHeight * 0.3) || document.documentElement.scrollTop > (window.innerHeight * 0.3)) {
@@ -36,7 +37,14 @@ function gallerymouseleave(){
 
 function showpopup(n){
   let closebehind = document.getElementById('closebehind');
-  let pop = document.getElementsByClassName('popup')[n];
+  pop = document.getElementsByClassName('popup')[n];
   pop.style.display = 'flex';
   closebehind.style.display = 'inline'
+}
+
+function closepopup(){
+  let closebehind = document.getElementById('closebehind');
+  pop.style.display = 'none';
+  closebehind.style.display = 'none'
+
 }
