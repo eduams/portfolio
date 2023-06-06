@@ -160,7 +160,49 @@ footer{
     max-width:70vw;
     
 }
-.popup h2{
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.project{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+}
+.title{
+    font-size: 3rem;
+    padding: 5%;
+}
+.projectbox{
+    display: flex;
+    flex-direction: row;
+}
+.projectbox .back{
+    background-color: #3bf95b;
+    padding: 1.5vw;
+}
+.project .right{
+    width: calc((100vw * 7/12) - 3vw);
+    margin-left: -1.5vw;
+}
+
+.project .left{
+    width: calc((100vw * 7/12) - 3vw);
+    margin-right: -1.5vw;
+}
+
+.project h3{
+    color: aliceblue;
+}
+.aboutproject{
+    display: flex;
+    flex-direction: column;
+    padding-left: calc(100% * 1/12);;
+    padding-right: calc(100% * 1/12);;
 }
 #closebehind{
     position: fixed;
