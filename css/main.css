@@ -5,6 +5,14 @@
     color: #191c1e;
     background: white;
   }  
+ul{
+    padding: 0px;
+    list-style: disc inside;
+    color: rgb(179, 205, 186);
+}
+ul li{
+    display: inline-block;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -25,6 +33,9 @@ h1{
 h2{
     color:azure;
 }
+h3{
+    color: rgb(179, 205, 186);
+}
 footer{
     width: 100%;
     background-color: #B1B2B5;
@@ -32,20 +43,31 @@ footer{
     padding-top: 20px;
     padding-bottom: 20px;
 }
+.button{
+    padding-top: 6%;
+    color: aliceblue;
+}
 .icon{
     filter: invert(70%) sepia(90%) saturate(387%) hue-rotate(70deg) brightness(95%) contrast(106%);
+    width: 4%;
 }
 .half-header{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 50%;
+    width: 75%;
+}
+.half-header2{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    width: 25%;
 }
 .content{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc(100% * 5/6);
+    width: calc(100% * 8/9);
 }
 .dashed-line{
     background-image: linear-gradient(to right, #3bf95b 30%, rgba(255, 255, 255, 0) 0%);
@@ -99,10 +121,10 @@ footer{
     width:  calc(100% * 6/12);
     background-color: #2e3436;
 }
-.aboutme-box h2{
+.aboutme-box h3{
     padding: 25px;
 }
-.aboutme-box h2::first-letter{
+.aboutme-box h3::first-letter{
     initial-letter: 3;
 }
 .contact{
@@ -182,7 +204,7 @@ footer{
     flex-direction: row;
 }
 .projectbox .back{
-    background-color: #3bf95b;
+    background-color: #3bf95bae;
     padding: 1.5vw;
 }
 .project .right{
@@ -203,6 +225,9 @@ footer{
     flex-direction: column;
     padding-left: calc(100% * 1/12);;
     padding-right: calc(100% * 1/12);;
+}
+.description{
+    color: aliceblue;
 }
 #closebehind{
     position: fixed;
