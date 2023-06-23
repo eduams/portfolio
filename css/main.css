@@ -1,6 +1,13 @@
 *{
     margin: 0;
 }
+canvas {
+    background-color: #000000;
+    position: fixed;
+    z-index: -1;
+    image-rendering: pixelated;
+
+  }
 ::selection {
     color: #191c1e;
     background: white;
@@ -78,6 +85,7 @@ footer{
     padding: 20px;
 }
 .gallery{
+    background-color: #191c1e;
     display: flex;
     flex-direction: row;
     height: auto; 
@@ -110,6 +118,7 @@ footer{
     flex-wrap: wrap;
 }
 .about-me{
+    background-color: #191c1e;
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -128,6 +137,7 @@ footer{
     initial-letter: 3;
 }
 .contact{
+    background-color: #191c1e;
     display: flex;
     flex-direction: row;
     height: 20%;
@@ -194,6 +204,7 @@ footer{
     flex-direction: row;
     align-items: center;
     height: 100vh;
+    background-color: #00000000;
 }
 .title{
     font-size: 3rem;
@@ -204,7 +215,7 @@ footer{
     flex-direction: row;
 }
 .projectbox .back{
-    background-color: #3bf95bae;
+    background-color: #3bf95b60;
     padding: 1.5vw;
 }
 .project .right{
