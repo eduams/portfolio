@@ -6,7 +6,6 @@ canvas {
     position: fixed;
     z-index: -1;
     image-rendering: pixelated;
-
   }
 ::selection {
     color: #191c1e;

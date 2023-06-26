@@ -52,13 +52,12 @@ const canvas = document.getElementById("canvas");
 //depois fazer uma função que pega a resolução da tela
 //width_screen = pegar res da tela
 //height_screen = pegar res da tela
-canvas.width  = 1440;
-canvas.height = 900; 
+
 const ctx = canvas.getContext("2d");
 
-function drawcube(x,y,fill){
+function drawcube(x,y,fill,size){
   ctx.fillStyle = fill;
-  ctx.fillRect(x, y, 2, 2);
+  ctx.fillRect(x, y, 2+size, 2+size);
 }
 
 var xx = [];
@@ -68,13 +67,19 @@ var reverse_y = [];
 var speed_x = [];
 var speed_y = [];
 var fillcolor = [];
+var size = [];
+var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+canvas.width = vw;
+canvas.height = vh;
 for(let i = 0;i<149;i++){
-  xx[i] = Math.random() * 2800;
-  yy[i] = Math.random() * 1800;  
+  xx[i] = Math.random() * vw;
+  yy[i] = Math.random() * vh;  
   reverse_x[i] = Math.random() >= 0.5;
   reverse_y[i] = Math.random() >= 0.5;
   speed_x[i] = Math.random() * 0.2;
   speed_y[i] = Math.random()* 0.2;
+  size[i] = Math.random() * 2;
 }
 
 setInterval(() => {
@@ -84,36 +89,36 @@ setInterval(() => {
       fillcolor[i] = Math.random();
 
       if (fillcolor[i] > 0.93){
-        window.onload = drawcube(xx[i],yy[i], "steelblue");
+        window.onload = drawcube(xx[i],yy[i], "steelblue", size[i]);
       }
       else{
-        window.onload = drawcube(xx[i],yy[i], "white");
+        window.onload = drawcube(xx[i],yy[i], "white",size[i]);
       }
 
-      if (yy[i] > 900){
+      if (yy[i] > vh){
         reverse_y[i] = true;
       }
       if (yy[i] < 0){
         reverse_y[i] = false;
       }
       if (reverse_y[i] == false){
-        yy[i] = yy[i] + (speed_y[i] + 0.3);
+        yy[i] = yy[i] + (speed_y[i] + 0.2);
       }
       else{
-        yy[i] = yy[i] - (speed_y[i] + 0.3);
+        yy[i] = yy[i] - (speed_y[i] + 0.2);
       }
 
-      if (xx[i] > 1400){
+      if (xx[i] > vw){
         reverse_x[i] = true;
       }
       if (xx[i] < 0){
         reverse_x[i] = false;
       }
       if (reverse_x[i] == false){
-        xx[i] = xx[i] + (speed_x[i] + 0.5);
+        xx[i] = xx[i] + (speed_x[i] + 0.2);
       }
       else{
-        xx[i] = xx[i] - (speed_x[i] + 0.5);
+        xx[i] = xx[i] - (speed_x[i] + 0.2);
       }
   }
 }, 50);
