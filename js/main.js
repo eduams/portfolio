@@ -4,7 +4,7 @@ var elements = document.getElementsByClassName("gallery-pic");
 var pop;
 
 function gallery() {
-  if (document.body.scrollTop > (window.innerHeight * 0.3) || document.documentElement.scrollTop > (window.innerHeight * 0.3)) {
+  if (document.body.scrollTop > (window.innerHeight * 3) || document.documentElement.scrollTop > (window.innerHeight * 3)) {
     for(i=0;i<=7;i++){
         elements[i].style.opacity = "1";
     }
@@ -57,7 +57,7 @@ const ctx = canvas.getContext("2d");
 
 function drawcube(x,y,fill,size){
   ctx.fillStyle = fill;
-  ctx.fillRect(x, y, 2+size, 2+size);
+  ctx.fillRect(x, y, 1+size, 1+size);
 }
 
 var xx = [];

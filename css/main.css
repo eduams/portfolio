@@ -44,10 +44,10 @@ h3{
 }
 footer{
     width: 100%;
-    background-color: #B1B2B5;
+    background-color: #b1b2b5;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
 }
 .button{
     padding-top: 6%;
@@ -84,7 +84,7 @@ footer{
     padding: 20px;
 }
 .gallery{
-    background-color: #191c1e;
+    background-color: #2e3436;
     display: flex;
     flex-direction: row;
     height: auto; 
@@ -100,6 +100,7 @@ footer{
     background-color: rgba(240, 248, 255, 0.249);
     width: 20vw;
     aspect-ratio: 1/1;
+    border-radius: 20px;
 }
 .gallery-pic{
     opacity: 0;
@@ -108,6 +109,7 @@ footer{
     object-fit: cover;
     transition: opacity 0.7s, width 0.3s, height 0.3s, margin 0.3s;
     cursor: pointer;
+    border-radius: 20px;
 }
 .aboutme-elements{
     display: flex;
@@ -120,7 +122,7 @@ footer{
     background-color: #191c1e;
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 70vh;
 }
 .about-me h1{
     width:  calc(100% * 2/12);
@@ -159,7 +161,7 @@ footer{
 }
 .contactbox{
     width:  calc(100% * 4/12);
-    border: #B1B2B5;
+    border: #b1b2b5;
     border-radius: 20px;
     border-style:solid;
 }
@@ -195,8 +197,8 @@ footer{
 .projects{
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    align-items: flex-start;
+    background-color: #191c1e;
 }
 .project{
     display: flex;
@@ -206,25 +208,26 @@ footer{
     background-color: #00000000;
 }
 .title{
-    font-size: 3rem;
-    padding: 5%;
+    position: absolute;
+    font-size: 2.5rem;
+    padding-top: 3%;
+    padding-left: calc(100vw * 1/12);
 }
 .projectbox{
     display: flex;
     flex-direction: row;
 }
 .projectbox .back{
-    background-color: #3bf95b60;
+    background-color: #ffffff60;
     padding: 1.5vw;
+    border-radius: 10px;
 }
 .project .right{
     width: calc((100vw * 7/12) - 3vw);
-    margin-left: -1.5vw;
 }
 
 .project .left{
     width: calc((100vw * 7/12) - 3vw);
-    margin-right: -1.5vw;
 }
 
 .project h3{
