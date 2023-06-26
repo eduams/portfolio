@@ -210,7 +210,7 @@ footer{
 .title{
     position: absolute;
     font-size: 2.5rem;
-    padding-top: 3%;
+    padding-top: 2%;
     padding-left: calc(100vw * 1/12);
 }
 .projectbox{
