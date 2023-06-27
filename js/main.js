@@ -1,10 +1,31 @@
-window.onscroll = function() {gallery()};
+window.onscroll = function() {gallery();
+  proj1()
+  proj2()
+};
 
 var elements = document.getElementsByClassName("gallery-pic");
 var pop;
 
+function proj1() {
+  var element = document.getElementById("proj1");
+  if (document.body.scrollTop > (window.innerHeight * 0.5) || document.documentElement.scrollTop > (window.innerHeight * 0.5 )) {
+    for(i=0;i<=7;i++){
+        element.style.opacity = "1";
+    }
+  }
+}
+
+function proj2() {
+  var element = document.getElementById("proj2");
+  if (document.body.scrollTop > (window.innerHeight * 1.5) || document.documentElement.scrollTop > (window.innerHeight * 1.5 )) {
+    for(i=0;i<=7;i++){
+        element.style.opacity = "1";
+    }
+  }
+}
+
 function gallery() {
-  if (document.body.scrollTop > (window.innerHeight * 3) || document.documentElement.scrollTop > (window.innerHeight * 3)) {
+  if (document.body.scrollTop > (window.innerHeight * 2.4) || document.documentElement.scrollTop > (window.innerHeight * 2.4)) {
     for(i=0;i<=7;i++){
         elements[i].style.opacity = "1";
     }
