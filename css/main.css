@@ -1,6 +1,11 @@
 *{
     margin: 0;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 canvas {
     background-color: #000000;
     position: fixed;
@@ -244,8 +249,8 @@ footer{
 .aboutproject{
     display: flex;
     flex-direction: column;
-    padding-left: calc(100% * 1/12);;
-    padding-right: calc(100% * 1/12);;
+    padding-left: calc(100% * 1/12);
+    padding-right: calc(100% * 1/12);
 }
 .description{
     color: aliceblue;
@@ -257,4 +262,72 @@ footer{
     height: 100vh;
     background-color: #ffffff43;
     z-index: 100;
+}
+
+@media (max-width: 660px)
+{
+    .half-header{
+        width: calc(100% * 10/12);
+    }
+    .half-header2{
+        width: 0%;
+    }
+    .content{
+        width: calc(100% * 9/9);
+    }
+    .projectbox{
+        display: flex;
+        flex-direction:column;
+    }
+    .project .right{
+        width: 100%;
+    }
+    
+    .project .left{
+        width: 100%;
+    }
+    #proj2{
+        flex-direction:column-reverse;
+    }
+    .projectbox .back{
+    width: calc(100% * 10/12 - 3vw);
+    margin-left: calc(100% * 1/12);
+    }
+    .gallery{
+        padding: 10px;
+    }
+    .gallery-box{
+        width: 40vw;
+        border-radius: 20px;
+    }
+    .aboutme-elements{
+        flex-direction: column;
+    }
+
+
+    .about-me .aboutme-box{
+        width:  calc(100% * 10/12);
+        margin-left: calc(100% * 1/12);
+        background-color: #2e3436;
+    }    
+    .about-me h1{
+        width:  calc(100% * 12/12);
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    .contact{
+        flex-direction: column;
+        height: 20%;
+    }
+    .contactbox{
+        width:  calc(100% * 10/12);
+        margin-left: calc(100% * 1/12);
+    }
+    .avatar{
+        margin-left: calc(100% * 5/12);
+        width: calc(100% * 2/12);
+    }
+    .aboutme-elements h1{
+        margin-left: calc(100% * 1/12);   
+    }
 }
